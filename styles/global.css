@@ -50,7 +50,7 @@ a {
 
 .text-style {
   font-size: 18px;
-  line-height: 24.0px;
+  line-height: 24px;
 }
 
 .overlay {
@@ -142,5 +142,3 @@ a {
   margin-top: -5px;
   margin-bottom: 0px;
 }
-
-
