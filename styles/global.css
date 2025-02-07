@@ -5,7 +5,7 @@ body {
   min-width: 1100px;
   margin: 0;
   color: #000;
-  background-color: #1e1e1e;
+  background-color: #fff;
 }
 
 h1,
@@ -53,12 +53,17 @@ a {
   line-height: 24px;
 }
 
-.overlay {
+/* переделала overlay как было в видео с наставником,
+  тк иначе совсем никак не получалась необходимая высота
+  у блока cover при помощи паддингов + в lots не отображаллись
+  карточки*/
+
+.overlay::before {
+  content: "";
+  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* HEADER: menu */
@@ -88,7 +93,7 @@ a {
 /* MAIN: lots */
 
 .lots__card-list-item {
-  position: relative;
+  /* position: relative; */
 
   width: 100%;
   height: 100%;
@@ -99,11 +104,11 @@ a {
   height: 100%;
   background-size: cover;
 }
- 
+
 .card__title,
 .card__text {
-  position: absolute;
-  z-index: 1;
+  /* position: absolute;
+  z-index: 1; */
 }
 
 .card__title {
